@@ -10,6 +10,10 @@ package authoroopjava;
  * @author user
  */
 public class Author {
+    
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_RESET = "\u001B[0m";
 
     private String name;
     private String surname;
@@ -25,10 +29,11 @@ public class Author {
     @Override
     public String toString() {
         return "Author{" + "\n"
-                + " name: " + name + ","+ "\n"
-                + " surname: " + surname + "," + "\n"
-                + " age: " + age + "," + "\n"
-                +"}";
+                + " name: " + ANSI_RED + name + "," + ANSI_RESET + "\n"
+                + " surname: " + ANSI_RED + surname + "," + ANSI_RESET + "\n"
+                + " age: " + ANSI_RED +  age + "," + ANSI_RESET + "\n"
+                +"}" + "\n"
+                + "\n";
     }
     
     

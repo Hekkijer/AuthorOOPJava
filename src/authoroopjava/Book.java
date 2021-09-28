@@ -12,6 +12,11 @@ import java.util.Arrays;
  * @author user
  */
 public class Book {
+    
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_RESET = "\u001B[0m";
+    
     private String title;
     private Author[] authors;
     
@@ -23,8 +28,9 @@ public class Book {
     @Override
     public String toString() {
         return "Book{" + "\n"
-                + " title: " + title + "," + "\n"
+                + " title: " + ANSI_GREEN + title + "," + ANSI_RESET + "\n"
                 + " authors: " + Arrays.toString(this.authors) + "," + "\n"
-                + "}";
+                + "}" + "\n"
+                + "=======================================" + "\n";
     }
 }
